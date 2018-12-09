@@ -5,7 +5,9 @@ window.onload = () => {
     { description: 'Breakfast', calories: 460 },
     { description: 'Snack', calories: 100 },
     { description: 'Lunch', calories: 600 },
+    { description: 'Dinner', calories: 1020 },
   ];
+
 
   // --- FUNCTIONS --- //
   
@@ -29,9 +31,9 @@ window.onload = () => {
 
   function addCalories(data) {
     const arr =[];
-    for (const k of data) {
-      arr.push(k.calories);
-    }
+    data.map(meal => {
+      arr.push(meal.calories)
+    });
     return arr.reduce(getSum);
   }
 
@@ -48,6 +50,7 @@ window.onload = () => {
     });
     node.appendChild(totalRow(data, node));
   }
+
 
   // --- GENERATE HTML --- //
 
