@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calorie Counter</title>
+  <link rel="stylesheet" href="/public/styles.css">
+  <script src="/public/app.js"></script>
+</head>
+<body>
+  <h1 class="title">Calorie Counter</h1>
+  <div class="form">
+    <div class="form__row">
+      <label class="form__label" for="meal">Meal:</label>
+      <input class="form__input" id="meal" type="text">
+    </div>
+    <div class="form__row">
+      <label class="form__label" for="calories">Calories:</label>
+      <input class="form__input" id="calories" type="text">
+    </div>
+    <div class="form__row">
+      <button id="submit_btn" class="form__btn btn--submit">Save</button>
+      <button id="cancel_btn" class="form__btn">Cancel</button>
+    </div>
+  </div>
+  <table class="table">
+    <thead class="table__head">
+      <tr>
+        <th>Meal</th>
+        <th>Calories</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="table__body" id="content">
+      <tr>
+        <td>{ meal_name }</td>
+        <td>{ mean_calories }</td>
+        <td>
+          <input type="checkbox" name="">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

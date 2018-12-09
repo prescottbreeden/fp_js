@@ -1,0 +1,76 @@
+:root {
+  /* color */
+  --black: #333;
+  --blue: steelblue;
+  --white: #eee;
+
+  /* other stuffs */
+  --padding: 3rem;
+  --btn-padding: 1rem 3rem;
+  --borderR: 5px;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  padding: var(--padding);
+}
+
+.title {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--black);
+}
+
+.form {
+  padding: var(--padding);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form__row {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.form__btn {
+  background-color: transparent;
+  border: 1px solid var(--black);
+  padding: var(--btn-padding);
+  border-radius: var(--borderR);
+  width: 48%;
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.btn--submit {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.table {
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: var(--padding);
+}
+
+.table__body {
+  color: var(--black);
+}
+
+th, td {
+  padding: 2rem;
+  border-bottom: 1px solid var(--black);
+}
