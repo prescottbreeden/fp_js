@@ -8,12 +8,15 @@
   --padding: 3rem;
   --btn-padding: 1rem 3rem;
   --borderR: 5px;
-
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+button::-moz-focus-inner {
+  border: 0;
 }
 
 html {
@@ -51,9 +54,7 @@ body {
   width: 48%;
   outline: none;
 }
-button::-moz-focus-inner {
-  border: 0;
-}
+
 
 .btn--submit {
   background-color: var(--blue);
@@ -64,6 +65,7 @@ button::-moz-focus-inner {
   margin: 0 auto;
   border: 1px solid black;
   padding: var(--padding);
+  padding-top: 1rem;
 }
 
 .table__body {
