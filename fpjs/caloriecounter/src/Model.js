@@ -4,7 +4,7 @@ const initModel = {
   showForm: false,
   nextId: 1,
   editId: null,
-  meals: [],
+  meals: [ ],
 };
 
 export default initModel;
