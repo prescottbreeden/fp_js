@@ -4,6 +4,7 @@ const EVENTS = {
   SHOW_FORM: 'SHOW_FORM',
   MEAL_INPUT: 'MEAL_INPUT',
   CALORIES_INPUT: 'CALORIES_INPUT',
+  SAVE_MEAL: 'SAVE_MEAL',
 };
 
 export function showFormEvent(showForm) {
@@ -27,6 +28,8 @@ export function caloriesInputEvent(calories) {
   };
 }
 
+export const saveMealEvent = { type: EVENTS.SAVE_MEAL };
+
 function update(event, model) {
   switch (event.type) {
     case EVENTS.SHOW_FORM:
@@ -40,10 +43,26 @@ function update(event, model) {
         parseInt,
         R.defaultTo(0),
       )(event.calories);
-      // const { calories } = event;
       return { ...model, calories };
+    case EVENTS.SAVE_MEAL: {
+      return add(model);
+    }
   }
   return model;
+}
+
+function add(model) {
+  const { nextId, description, calories } = model;
+  const meal = { id: nextId, description, calories };
+  const meals = [...model.meals, meal];
+  return {
+    ...model,
+    meals,
+    nextId: nextId + 1,
+    description: '',
+    calories: 0,
+    showForm: false,
+  };
 }
 
 export default update;
